@@ -10,7 +10,7 @@ public class Main {
 
         // Meminta input dari pengguna untuk elemen-elemen array
         int[] arrayAngka = errorHandling.inputArrayNumber(
-                "Masukkan elemen array (" + lengthArray +" angka dipisah spasi): ", lengthArray);
+                "Masukkan elemen array (" + lengthArray +" angka dipisah spasi/enter): ", lengthArray);
 
         // Mengurutkan array secara ascending
         Arrays.sort(arrayAngka);
@@ -24,7 +24,7 @@ public class Main {
         }
 
         // Menampilkan array yang sudah diurutkan
-        System.out.println("Kumpulan array: " + Arrays.toString(arrayAngka));
+        System.out.println("\nKumpulan array: " + Arrays.toString(arrayAngka));
 
         // Menampilkan jumlah pasangan angka unik yang ditemukan
         System.out.println("Jumlah pasangan angka unik yang ditemukan: " + uniqueNumber);
