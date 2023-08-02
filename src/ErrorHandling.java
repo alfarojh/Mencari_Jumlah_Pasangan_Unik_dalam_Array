@@ -30,7 +30,10 @@ public class ErrorHandling {
 
         // Mengisi array dengan bilangan bulat yang dimasukkan oleh pengguna
         for (int i = 0; i < lengthArray; i++) {
-            arrayNumber[i] = inputInt("");
+            while (!scanner.hasNextInt()) {
+                scanner.next();
+            }
+            arrayNumber[i] = scanner.nextInt();
         }
 
         // Mengembalikan array yang sudah terisi
