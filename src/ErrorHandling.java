@@ -27,22 +27,23 @@ public class ErrorHandling {
     public int[] inputArrayNumber(String message, int lengthArray) {
         int[] arrayNumber = new int[lengthArray];
         System.out.print(message);
+        boolean error = true;
 
         // Mengisi array dengan bilangan bulat yang dimasukkan oleh pengguna
         for (int i = 0; i < lengthArray; i++) {
             while (!scanner.hasNextInt()) {
                 scanner.next();
+                if (error) {
+                    errorMessage("Maaf, input harus berupa bilangan bulat");
+                    error = false;
+                }
             }
             arrayNumber[i] = scanner.nextInt();
+            error = true;
         }
 
         // Mengembalikan array yang sudah terisi
         return arrayNumber;
-    }
-
-    // Membersihkan scanner setelah input
-    public void clearScanner() {
-        scanner.nextLine();
     }
 
     // Menutup scanner setelah selesai digunakan

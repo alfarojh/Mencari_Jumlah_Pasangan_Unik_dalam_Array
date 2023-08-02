@@ -6,7 +6,6 @@ public class Main {
 
         // Meminta input dari pengguna untuk panjang array
         int lengthArray = errorHandling.inputInt("Masukkan panjang array: ");
-        errorHandling.clearScanner();
 
         // Meminta input dari pengguna untuk elemen-elemen array
         int[] arrayAngka = errorHandling.inputArrayNumber(
